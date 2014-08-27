@@ -1,0 +1,38 @@
+
+alias la ls -aF
+alias ll ls -lAF
+umask 22
+set path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin \
+  /usr/local/bin $HOME/bin)
+  setenv EDITOR vim
+  setenv PAGER more
+  setenv BLOCKSIZE K
+  if ( $?prompt ) then
+    if ( $uid == 0 ) then
+      set user = root
+      set prompt = "[%T] # "
+    else
+      set prompt = "[%T] $ "
+    endif
+    set autoexpand
+    set autolist
+    set autorehash
+    set filec
+    set noding
+    set autolist = ambiguous
+    set history = 1000
+    set savehist = (1000 merge)
+    set mail = (/var/mail/$USER)
+    if ( $?tcsh ) then
+      bindkey -k up history-search-backward
+      bindkey -k down history-search-forward
+      bindkey "\e[1~" beginning-of-line
+      bindkey "\e[3~" delete-char
+      bindkey "\e[4~" end-of-line
+    endif
+  endif
+
+
+  setenv go_libs -lm
+  setenv go_flags "-g -Wall -O2"
+  alias go_c c99 -xc '-' $go_libs $go_flags
