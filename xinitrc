@@ -1,4 +1,4 @@
-# !/bin/bash
+# !/bin/sh
 
 xrdb ~/.Xresources                                   # Load Xresources for console config
 
@@ -13,4 +13,4 @@ xrdb ~/.Xresources                                   # Load Xresources for conso
 # autocutsel -selection PRIMARY -fork &                   # autocutsel for cut/paste
 #[[ -z "$(pidof dwmstatus)" ]] && dwmstatus &         # dwmstatus info for dwm statusbar
 
-exec i3                                            # Run dwm, my preferred WM at the moment
+exec i3 # Run dwm, my preferred WM at the moment
