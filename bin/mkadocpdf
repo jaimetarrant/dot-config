@@ -1,0 +1,2 @@
+#!/bin/ksh
+a2x -v -fxhtml --dblatex-opts="-s /home/jdt/doc/jplates/cookiesystems/cookiesystems.sty -p /home/jdt/doc/jplates/cookiesystems/cookiesystems.xsl" $1
