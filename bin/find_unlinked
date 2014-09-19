@@ -1,0 +1,8 @@
+#!/bin/sh
+for i in $(find /usr{,/local}/{bin,lib} -type f); do
+    if file $i | grep -q 'ELF.*dynamically' 2>&1 > /dev/null; then
+        if ! ldd $i > /dev/null; then
+            echo $i appears to be unlinked >&2
+        fi
+    fi
+done
