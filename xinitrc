@@ -1,6 +1,6 @@
 # !/bin/sh
 
-xrdb ~/.Xresources                                      # Load Xresources for console config
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # [[ -z "$(pidof xcompmgr)" ]] && xcompmgr &            # Compositing for artificial transparency if desired
 #[[ -z "$(pidof nm-applet)" ]] && nm-applet &           # NetworkManager applet for dwm systray (requires patch).
