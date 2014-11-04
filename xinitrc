@@ -4,6 +4,7 @@
 
 # [[ -z "$(pidof xcompmgr)" ]] && xcompmgr &            # Compositing for artificial transparency if desired
 #[[ -z "$(pidof nm-applet)" ]] && nm-applet &           # NetworkManager applet for dwm systray (requires patch).
+[[ -z "$(pgrep apmd)" ]] && apmd &                      # Start apmd
 [[ -z "$(pgrep syndaemon)" ]] && syndaemon -i 1 -k &    # Disables mouse whilst typing - very useful on laptops!
 [[ -z "$(pgrep fetchmail)" ]] && fetchmail &            # start fetchmail
 #[[ -z "$(pidof ssh-agent)" ]] && ssh-agent &           # Start ssh-agent to avoid having to enter pw each time

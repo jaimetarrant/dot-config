@@ -3,41 +3,41 @@
 
 ! terminal colors ------------------------------------------------------------
 
-! tangoesque scheme
-*background: #000000
-*foreground: #babdb6
-! Black (not tango) + DarkGrey
-*color0:  #000000
-*color8:  #555753
-! DarkRed + Red
-*color1:  #ff6565
-*color9:  #ff8d8d
-! DarkGreen + Green
-*color2:  #93d44f
-*color10: #c8e7a8
-! DarkYellow + Yellow
-*color3:  #eab93d
-*color11: #ffc123
-! DarkBlue + Blue
-*color4:  #204a87
-*color12: #3465a4
-! DarkMagenta + Magenta
-*color5:  #ce5c00
-*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-*color6:  #89b6e2
-*color14: #46a4ff
-! LightGrey + White
-*color7:  #cccccc
-*color15: #ffffff
+!!! tangoesque scheme
+!*background: #000000
+!*foreground: #babdb6
+!! Black (not tango) + DarkGrey
+!*color0:  #000000
+!*color8:  #555753
+!! DarkRed + Red
+!*color1:  #ff6565
+!*color9:  #ff8d8d
+!! DarkGreen + Green
+!*color2:  #93d44f
+!*color10: #c8e7a8
+!! DarkYellow + Yellow
+!*color3:  #eab93d
+!*color11: #ffc123
+!! DarkBlue + Blue
+!*color4:  #204a87
+!*color12: #3465a4
+!! DarkMagenta + Magenta
+!*color5:  #ce5c00
+!*color13: #f57900
+!!DarkCyan + Cyan (both not tango)
+!*color6:  #89b6e2
+!*color14: #46a4ff
+!! LightGrey + White
+!*color7:  #cccccc
+!*color15: #ffffff
 
 *font:             xft:Terminus:size=12:antialias=true:hinting=true
 *boldFont:         xft:Terminus:bold:size=12:antialias=true:hinting=true
 
-!urxvt*termName:         rxvt-unicode
+urxvt*termName:         rxvt-unicode
 !!urxvt*background:       #000000
 !!urxvt*foreground:       #717171
-!urxvt*scrollBar:        false
+urxvt*scrollBar:        false
 !urxvt*matcher*button:   1
 !urxvt*cursorBlink:      false
 !urxvt*cursorUnderline:  true
@@ -45,16 +45,16 @@
 !urxvt*colorBD:          #816955
 !urxvt*internalBorder:   3
 !
-!urxvt*transparent:      true
-!urxvt*allow_bold:       true
-!urxvt*loginShell:       true
-!urxvt*saveLines:        800
+urxvt*transparent:      true
+urxvt*allow_bold:       true
+urxvt*loginShell:       true
+urxvt*saveLines:        50000
 !
 !URxvt*mapAlert:         true
 !URxvt*visualBell:       true
 !URxvt*urgentOnBell:     true
-!URxvt*inheritPixmap:    true
-!URxvt*tintColor:        black
+URxvt*inheritPixmap:    true
+URxvt*tintColor:        black
 !URxvt*shading:          60
 !!URxvt*geometry:        80x17
 !
@@ -62,9 +62,9 @@
 !urxvt*background: black
 !
 !!! Larger history limit
-!urxvt.saveLines: 500000
+urxvt.saveLines: 500000
 !
-!!URxvt*perl-ext-common:      default,matcher,clipboard
+!URxvt*perl-ext-common:      default,matcher,clipboard
 !
 !URxvt*color0:  #2E3436
 !URxvt*color1:  #a40000
@@ -109,8 +109,8 @@ urxvt.perl-ext-common:default,clipboard,matcher,keyboard-select
 !URxvt.keysym.M-c:     perl:clipboard:copy
 !URxvt.keysym.M-v:     perl:clipboard:paste
 !URxvt.keysym.M-C-v:   perl:clipboard:paste_escaped
-URxvt.copyCommand:   xsel -ib
-URxvt.pasteCommand:  xsel -ob
+!URxvt.copyCommand:   xsel -ib
+!URxvt.pasteCommand:  xsel -ob
 !ckground: #0f0f0f
 !*foreground: #c8c8c8
 !
