@@ -2,11 +2,40 @@
 #
 # sh/ksh initialization
 
+. /etc/ksh.kshrc
 
-AUTOCONF_VERSION=2.65
+umask 002
+
+# PS1='`whoami`@\w> '
+
+EDITOR='/usr/bin/vim'
+WRKOBJDIR=/usr/obj
+BSDOBJDIR=/usr/obj
+BROWSER=conkeror
+PAGER=less
+TERM=/usr/local/bin/urxvt
+
+PKG_PATH=ftp://ftp.usa.openbsd.org/pub/OpenBSD/snapshots/packages/`arch -s`/
+
 CVSROOT=anoncvs@anoncvs1.ca.openbsd.org:/cvs
-TERM=xterm-265color
 
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
-export PATH HOME TERM CVSROOT AUTOCONF_VERSION
+
+export PS1 EDITOR WRKOBJDIR BSDOBJDIR BROWSER PAGER PATH HOME TERM PKG_PATH CVSROOT
+
+# C Stuff
+
+AUTOCONF_VERSION=2.65
+CFLAGS='-g -Wall -O2'
+LDLIBS='-lm'
+
+export AUTOCONF_VERSION CFLAGS LDLIBS
+
+alias ee='emacsclient'
+alias cookie='echo Cookie!'
+alias ls='ls -CFh '
+alias lpq='lpq -l '
+alias screen='screen -R '
+alias cvsync='/usr/local/bin/cvsync -vz -p /tmp/cvsync.pid'
+alias cvs='opencvs'
 
