@@ -1,0 +1,3 @@
+#!/bin/ksh
+
+xinput disable /dev/wsmouse1 && sleep 1 && xinput enable /dev/wsmouse1
