@@ -8,7 +8,7 @@ umask 002
 
 # PS1='`whoami`@\w> '
 
-EDITOR='/usr/bin/vim'
+EDITOR='/usr/local/bin/vim'
 WRKOBJDIR=/usr/obj
 BSDOBJDIR=/usr/obj
 BROWSER=conkeror
@@ -37,5 +37,3 @@ alias ls='ls -CFh '
 alias lpq='lpq -l '
 alias screen='screen -R '
 alias cvsync='/usr/local/bin/cvsync -vz -p /tmp/cvsync.pid'
-alias cvs='opencvs'
-
