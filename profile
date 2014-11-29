@@ -32,7 +32,6 @@ LDLIBS='-lm'
 export AUTOCONF_VERSION CFLAGS LDLIBS
 
 alias ee='emacsclient'
-alias cookie='echo Cookie!'
 alias ls='ls -CFh '
 alias lpq='lpq -l '
 alias screen='screen -R '
