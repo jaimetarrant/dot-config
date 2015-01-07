@@ -1,0 +1,3 @@
+#!/bin/ksh
+
+a2x -fpdf --dblatex-opts="-s ~/doc/tmpl/jplates/cookiesystems/cookiesystems.sty -p ~/doc/tmpl/jplates/cookiesystems/cookiesystems.xsl" ./$1
