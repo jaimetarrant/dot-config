@@ -1,0 +1,19 @@
+#!/bin/ksh
+
+OPT="$1"
+FILE="$2"
+OUTFILE="$3"
+
+[ ! -e "$FILE" ] && echo "File not found." && exit
+
+case "$OPT" in
+  -e)
+    openssl aes-256-cbc -salt -in "$FILE" -out "$OUTFILE"
+    ;;
+  -d)
+    openssl aes-256-cbc -d -salt -in "$FILE" -out "$OUTFILE"
+    ;;
+  *)
+    echo "no help, just read the script."
+    ;;
+esac

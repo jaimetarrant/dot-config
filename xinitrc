@@ -10,10 +10,11 @@
 #[[ -z "$(pidof ssh-agent)" ]] && ssh-agent &           # Start ssh-agent to avoid having to enter pw each time
 #[[ -z "$(pidof gpg-agent)" ]] && gpg-agent &           # Start gpg-agent
 #[[ -z "$(pidof skyped)" ]] && skyped &                 # Start Skype Interface daemon for bitlbee
-# autocutsel -fork &                                    # autocutsel config for cut/paste
-# autocutsel -selection PRIMARY -fork &                 # autocutsel for cut/paste
-[[ -z "$(pgrep dwmstatus)" ]] && dwmstatus &            # dwmstatus info for dwm statusbar
+autocutsel -fork &                                    # autocutsel config for cut/paste
+autocutsel -selection PRIMARY -fork &                 # autocutsel for cut/paste
+#[[ -z "$(pgrep dwmstatus)" ]] && dwmstatus &            # dwmstatus info for dwm statusbar
 #[[ -z "$(pgrep emacs)" ]] && emacs --daemon &           # start emacs daemon
+xmodmap ~/.xmodmaprc &
 #exec dwm                                                # Run dwm, my preferred WM... at the moment.
 #exec i3
 #exec stumpwm
