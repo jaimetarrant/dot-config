@@ -1,6 +1,6 @@
 ! Solarized color scheme for the X Window System
 
-urxvt*font:xft:DejaVu Sans Mono:size=12
+urxvt*font:xft:DejaVu Sans Mono:size=10
 
 #define t_bg_floor #010000
 #define t_bg_dip #191815

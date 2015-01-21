@@ -1,6 +1,6 @@
 # !/bin/sh
 
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+[[ -e ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # [[ -z "$(pidof xcompmgr)" ]] && xcompmgr &            # Compositing for artificial transparency if desired
 #[[ -z "$(pidof nm-applet)" ]] && nm-applet &           # NetworkManager applet for dwm systray (requires patch).
