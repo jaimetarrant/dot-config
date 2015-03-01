@@ -2,6 +2,15 @@
 
 urxvt*font:xft:DejaVu Sans Mono:size=10
 
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+
 #define t_bg_floor #010000
 #define t_bg_dip #191815
 #define t_background #000000
@@ -17,6 +26,10 @@ URxvt.colorIT: t_fg_highlight
 URxvt.colorUL: t_fg_highlight
 URxvt.cursorColor: #B47CAD
 URxvt.scrollBar: false
+
+URxvt.transparent:   true
+URxvt.tintColor:     white
+URxvt.shading:       8
 
 ! BLK
 URxvt.color0: t_bg_bump

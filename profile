@@ -19,7 +19,7 @@ PKG_PATH=ftp://ftp.usa.openbsd.org/pub/OpenBSD/snapshots/packages/`arch -s`/
 
 CVSROOT=anoncvs@anoncvs1.ca.openbsd.org:/cvs
 
-PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
+PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:/home/jdt/.gem/ruby/2.2.0/bin:.
 
 export PS1 EDITOR WRKOBJDIR BSDOBJDIR BROWSER PAGER PATH HOME TERM PKG_PATH CVSROOT
 

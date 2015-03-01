@@ -1,0 +1,102 @@
+#!/usr/bin/python
+import getopt
+import sys
+import os
+
+def usage(mode='default'):
+	executable_name = os.path.basename(sys.argv[0])
+
+	usage_message = {
+		'artifact': ' [all|estimate|estimatetriple|graph|list|basiclist|listrst|basiclistrst|planner|rtm]',
+		'trace': ' [requirement|package|document]',
+		'init': ' ',
+		'new': ' [glossary|package|requirement(req)|stakeholder] [name]',
+		'check': ' ',
+	}
+
+	if mode == 'default':
+		modes = ''
+		for key, message in usage_message.items():
+			modes = '%s|%s' % (key, modes)
+
+		modes = modes.lstrip('|')
+		modes = modes.rstrip('|')
+		print 'Usage: %s [%s] <actions>' % (executable_name, modes)
+	else:
+		print 'Usage: %s %s%s' % (executable_name, mode, usage_message[mode])
+
+def new_mode():
+	if len(sys.argv) == 4:
+		actions = ['glossary', 'package', 'requirement', 'stakeholder']
+		is_valid_action = False
+		action = sys.argv[2]
+
+		if action == 'req':
+			action = 'requirement'
+
+		for valid_action in actions:
+			if action == valid_action:
+				is_valid_action = True
+
+		if is_valid_action:
+			Action.new_item(action, sys.argv[3])
+		else:
+			usage('new')
+			report_error(1, 'Action "%s" not recognized' % action)
+	else:
+		usage('new')
+		report_error(1, 'Wrong number of arguments')
+
+
+def trace_mode():
+	valid_arguments = False
+
+	if len(sys.argv) == 3:
+		item = sys.argv[2]
+		valid_arguments = True
+	else:
+		usage('trace')
+		report_error(1, 'Wrong number of arguments')
+
+	if valid_arguments:
+		Action.list_direct_traces(item)
+	else:
+		usage('trace')
+		sys.exit(1)
+
+def artifact_mode():
+	if len(sys.argv) == 3:
+		Action.build_artifacts(sys.argv[2])
+	else:
+		usage('artifact')
+		report_error(1, 'Wrong number of arguments')
+
+
+try:
+	mode = sys.argv[1]
+except Exception:
+	usage()
+	sys.exit(0)
+
+# Bit hackish, but if init mode then can't import other stuff they will checks if
+# a valid repository dir exists, which of course shouldn't happen, as we
+# are creating a new repository
+if mode == 'init':
+	import InitRepo
+	InitRepo.init_repo()
+	sys.exit(0)
+else:
+	import Action
+	from requirements.Utility import report_error
+
+if mode == "trace":
+	trace_mode()
+elif mode == "new":
+	new_mode()
+elif mode == "artifact":
+	artifact_mode()
+elif mode == "check":
+	Action.check_repo()
+else:
+	usage()
+	report_error(1, 'Unknown mode "%s"' % mode)
