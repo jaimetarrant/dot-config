@@ -1,6 +1,6 @@
 #!/bin/sh
 
-feh --bg-scale ~/Pictures/silly/vladstudio_nocturnal_1024x768.jpg
+#feh --bg-scale ~/Pictures/silly/vladstudio_nocturnal_1024x768.jpg
 
 [[ -e ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
