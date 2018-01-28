@@ -2,14 +2,13 @@
 
 urxvt*font:xft:DejaVu Sans Mono:size=10
 
-Xft.dpi: 96
+Xft.dpi: 180
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-
 
 #define t_bg_floor #010000
 #define t_bg_dip #191815
